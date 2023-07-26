@@ -16,6 +16,8 @@
   <center><input type="search" class="search"/></center>
  <center><button class="patreons" >Patreon</button><button class="patreons">Donate</button><button class="patreons">Courses</button>
  <button class="patreons">Books</button>
+  <button class="patreons">Stuff</button>
+
  </center>
 </div>
 </template>

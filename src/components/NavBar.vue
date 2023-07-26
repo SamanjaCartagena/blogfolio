@@ -49,7 +49,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <router-link to="/" class="button" style="background-color: #001a1f; color:white">
+          <router-link to="/twitter" class="button" style="background-color: #001a1f; color:white">
             <strong>Twitter</strong>
           </router-link>
           <router-link to="/" class="button is-light">
@@ -58,6 +58,9 @@
 
           <router-link to="/" class="button"  style="background-color: #001a1f; color:white">
            <strong> Meta </strong>
+          </router-link>
+           <router-link to="/" class="button is-light">
+           <strong>Newsletter</strong>
           </router-link>
         </div>
       </div>
@@ -78,6 +81,14 @@ export default {
 <style>
 .navbar{
     height:100px;
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+  'Microsoft YaHei', '微软雅黑', Arial, sans-serif;;
 }
-
+@media only screen and (max-width:700px){
+.navbar{
+  padding:5px;
+  position:relative;
+  top:10px;
+}
+}
 </style>
