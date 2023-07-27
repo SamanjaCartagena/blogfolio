@@ -14,9 +14,11 @@
    
   <center><p class="heading">Welcome to My<br/> BlogFolio</p></center>
   <center><input type="search" class="search"/></center>
- <center><button class="patreons" >Patreon</button><button class="patreons">Donate</button><button class="patreons">Courses</button>
- <button class="patreons">Books</button>
-  <button class="patreons">Stuff</button>
+ <center><button class="patreons" @click="btnclicked($event.target.value)" value="patreon">Patreon</button>
+ <button class="patreons" @click="btnclicked($event.target.value)" value="donations">Donate</button>
+ <button class="patreons" @click="btnclicked($event.target.value)" value="courses">Courses</button>
+ <button class="patreons" @click="btnclicked($event.target.value)" value="books">Books</button>
+  <button class="patreons" @click="btnclicked($event.target.value)" value="stuff">Stuff</button>
 
  </center>
 </div>
@@ -30,6 +32,26 @@ export default {
         return{
             profile:profile
         }
+    },
+    methods:{
+      btnclicked(v){
+        if(v.includes('books')){
+          alert('Books have been clicked')
+        }
+        else if(v.includes('stuff')){
+          alert('Stuff have been clicked')
+        }
+        else if(v.includes('patreon')){
+          alert('Patreon has been clicked')
+        }
+        else if(v.includes('donations')){
+          alert('Donations have been clicked')
+        }
+        else if(v.includes('courses')){
+          alert('Courses have been cliced')
+        }
+
+}
     }
 
 }
@@ -52,6 +74,12 @@ export default {
     border-bottom:0px;
     border-right:.2px solid white;
     margin:5px;
+}
+.patreons:hover{
+  background-color: white;
+  color:#001a1f;
+  border-color:1px solid #001a1f;
+  cursor:pointer;
 }
 .heading{
     font-size: 50px;

@@ -17,19 +17,34 @@
       <a class="navbar-item">
         Home
       </a>
-
-      <a class="navbar-item">
-        Documentation
-      </a>
-
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          More
+          Front End
         </a>
 
         <div class="navbar-dropdown">
           <a class="navbar-item">
-            About
+            JavaScript
+          </a>
+          <a class="navbar-item">
+            React JS
+          </a>
+          <a class="navbar-item">
+            Brain JS
+          </a>
+          <a class="navbar-item">
+            Vue JS
+          </a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Back End
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            Java
           </a>
           <a class="navbar-item">
             Jobs
@@ -52,7 +67,7 @@
             <strong>Twitter</strong>
           </router-link>
           <router-link target="_blank" to="/" class="button is-light">
-           <strong>Discord</strong>
+           <strong>YouTube</strong>
           </router-link>
 
           <router-link target="_blank" to="/" class="button"  style="background-color: #001a1f; color:white">

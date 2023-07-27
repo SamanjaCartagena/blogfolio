@@ -11,11 +11,12 @@
       <p lang="en" dir="ltr">Hosting multiple sites on a single server nginx. This would reduce the costs of hosting. There is no limit to the number of sites you can host using nginx. You just have to make sure that the server has enough disk space.</p>&mdash; Samanja Cartagena (@Samanja09) 
       <a href="https://twitter.com/Samanja09/status/1683559952097345536?ref_src=twsrc%5Etfw">July 24, 2023</a></blockquote> 
 
-      <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Can HTMX really replace complex frameworks like react?</p>&mdash; Samanja Cartagena (@Samanja09) <a href="https://twitter.com/Samanja09/status/1682727769531199489?ref_src=twsrc%5Etfw">July 22, 2023</a></blockquote> 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;ve been learning Vue.js for a while now, I just came across this tutorial by <a href="https://twitter.com/Samanja09?ref_src=twsrc%5Etfw">@Samanja09</a> on how to create a custom modal with Vue.js.<br><br> Learned some concept about Vue.js from following the tutorial.<br><br>Thanks for the tutorial Samanja, well done!<a href="https://t.co/EReDXfc6jg">https://t.co/EReDXfc6jg</a></p>&mdash; Deji ✍️ (@thecodeangle) <a href="https://twitter.com/thecodeangle/status/1684626089925058560?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote>
       <blockquote class="twitter-tweet"><p lang="en" dir="ltr">React contains server side rendering and angular has client side rendering</p>&mdash; Samanja Cartagena (@Samanja09) <a href="https://twitter.com/Samanja09/status/1682412616759607299?ref_src=twsrc%5Etfw">July 21, 2023</a></blockquote>
    
       
     </div>
+
     </center>
   </div>
 </template>
