@@ -68,6 +68,7 @@
           </router-link>
           <router-link target="_blank" to="/" class="button is-light">
            <strong>LinkTree</strong>
+
           </router-link>
 
           <router-link target="_blank" to="/meta" class="button"  style="background-color: #001a1f; color:white">
