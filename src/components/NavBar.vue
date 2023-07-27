@@ -74,10 +74,10 @@
     :before-close="handleClose"
   >
   <span>
-      Sign up for Newsletter 
+      <strong>Sign up for Newsletter </strong>
     </span>  
      <form>
-      <input type='email' v-model='mail' placeholder="Email"/>
+      <input style="width:300px; height:30px;" type='email' v-model='mail' placeholder="Email"/>
       
      </form>
     
