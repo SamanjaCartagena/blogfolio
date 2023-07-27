@@ -1,18 +1,14 @@
 <template>
   <div>
-   <div class="columns">
+ <div class="columns">
   <div class="column">
-    First column
+    First Book
   </div>
   <div class="column">
     Second column
   </div>
-  <div class="column">
-    Third column
-  </div>
-  <div class="column">
-    Fourth column
-  </div>
+ 
+ 
 </div>
   </div>
 </template>
@@ -23,6 +19,12 @@ export default {
 }
 </script>
 
-<style>
+<style >
+.column{
+    height:300px;
+    background-color: red;
+    margin:10px;
+}
+
 
 </style>

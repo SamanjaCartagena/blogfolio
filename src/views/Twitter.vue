@@ -1,9 +1,10 @@
 <template>
   <div >
     <center>
-    <p style="font-size:30px;"><strong>Find me on Twitter </strong>
 
-    <img :src="this.twitterlogo" style="width:60px; height:60px; padding:5px; position:relative; top:20px;"/>
+    <p style="font-size:30px; background-color:#001a1f; color:white;position:relative; bottom:10px; ">Find me on Twitter 
+
+    <img :src="this.twitterlogo" style="width:40px; height:40px; padding:5px; position:relative; top:10px;"/>
     </p>
     <div style="display :flex">
       

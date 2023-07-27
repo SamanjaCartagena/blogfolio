@@ -36,7 +36,7 @@ export default {
     methods:{
       btnclicked(v){
         if(v.includes('books')){
-          alert('Books have been clicked')
+           this.$router.push({path:'/books'})
         }
         else if(v.includes('stuff')){
           alert('Stuff have been clicked')

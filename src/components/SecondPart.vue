@@ -1,29 +1,36 @@
 <template>
-
-     <el-row>
-      
-    <el-col
-      v-for="(card, index) in cards"
-      :key="card.id"
-      :span="8"
-      :offset="index > 0 ? card : 0"
-    >
-      <el-card :body-style="{ padding: '0px' }">
-        <img
-          :src="card.pic"
-          class="image"
-        />
-        <div style="padding: 14px">
-          <span>Yummy hamburger</span>
-          <div class="bottom">
-            <time class="time">{{ currentDate }}</time>
-            <el-button text class="button">Operating</el-button>
-          </div>
-        </div>
-      </el-card>
-    </el-col>
-       
-  </el-row>
+      <div>
+      <div class="columns">
+  <div class="column">
+    First column
+  </div>
+  <div class="column">
+    Second column
+  </div>
+  <div class="column">
+    Third column
+  </div>
+  <div class="column">
+    Fourth column
+  </div>
+</div>
+ <div class="columns">
+  <div class="column">
+    First column
+  </div>
+  <div class="column">
+    Second column
+  </div>
+  <div class="column">
+    Third column
+  </div>
+  <div class="column">
+    Fourth column
+  </div>
+</div>
+      </div>    
+   
+   
 
 </template>
 
@@ -95,6 +102,7 @@ export default {
   display: block;
   height:300px;
 }
+
 @media only screen and (max-width:700px){
   .colstyler{
     margin:5px;

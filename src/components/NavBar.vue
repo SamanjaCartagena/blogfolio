@@ -67,10 +67,10 @@
             <strong>Twitter</strong>
           </router-link>
           <router-link target="_blank" to="/" class="button is-light">
-           <strong>YouTube</strong>
+           <strong>LinkTree</strong>
           </router-link>
 
-          <router-link target="_blank" to="/" class="button"  style="background-color: #001a1f; color:white">
+          <router-link target="_blank" to="/meta" class="button"  style="background-color: #001a1f; color:white">
            <strong> Meta </strong>
           </router-link>
            <a target="_blank"  @click="dialogVisible = true" class="button is-light">
@@ -125,7 +125,8 @@ export default {
       this.$store.state.email=this.mail;
       console.log(this.$store.state.email)
       this.mail=''
-    }
+    },
+
 
   }
 
