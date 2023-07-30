@@ -63,9 +63,9 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <router-link target="_blank" to="/twitter" class="button" style="background-color: #001a1f; color:white">
+          <a @click="twitterClicked" target="_blank" class="button" style="background-color: #001a1f; color:white">
             <strong>Twitter</strong>
-          </router-link>
+          </a>
           <router-link target="_blank" to="/" class="button is-light">
            <strong>LinkTree</strong>
 
@@ -127,6 +127,9 @@ export default {
       console.log(this.$store.state.email)
       this.mail=''
     },
+    twitterClicked(){
+      this.$router.push({path:'/twitter'})
+    }
 
 
   }

@@ -25,12 +25,23 @@
 <script>
 import twitterlogo from '../assets/twitter.png'
 export default {
+  metaInfo: {
+      script: [
+        { src: 'https://platform.twitter.com/widgets.js', async: true, defer: true }
+      ],
+    },
     data(){
         return {
             twitterlogo:twitterlogo
         }
     }, 
     mounted(){
+       const recaptchaScript = document.createElement("script");
+    recaptchaScript.setAttribute(
+      "src",
+      "https://platform.twitter.com/widgets.js"
+    );
+    document.head.appendChild(recaptchaScript);
     }
 
 }
