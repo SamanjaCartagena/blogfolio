@@ -13,7 +13,7 @@
   </div>
    
   <center><p class="heading">Welcome to My<br/> BlogFolio</p></center>
-  <center><input type="search" class="search"/></center>
+  <center><input type="search" class="search" placeholder="Search for tutorials,courses and materials"/></center>
  <center><button class="patreons" @click="btnclicked($event.target.value)" value="patreon">Patreon</button>
  <button class="patreons" @click="btnclicked($event.target.value)" value="donations">Donate</button>
  <button class="patreons" @click="btnclicked($event.target.value)" value="courses">Courses</button>
@@ -21,16 +21,44 @@
   <button class="patreons" @click="btnclicked($event.target.value)" value="stuff">Stuff</button>
 
  </center>
+
+  <el-dialog v-model="visible" :show-close="false">
+    <template #header="{ close, titleId, titleClass }">
+      <div class="my-header">
+        <h4 :id="titleId" :class="titleClass">This is a custom header!</h4>
+        <el-button type="danger" @click="close">
+          <el-icon class="el-icon--left"><CircleCloseFilled /></el-icon>
+          Close
+        </el-button>
+      </div>
+    </template>
+    This is dialog content.
+  </el-dialog>
+  <el-dialog v-model="visible1" :show-close="false">
+    <template #header="{ close, titleId, titleClass }">
+      <div class="my-header">
+        <h4 :id="titleId" :class="titleClass">This is visible 1 header!</h4>
+        <el-button type="danger" @click="close">
+          <el-icon class="el-icon--left"><CircleCloseFilled /></el-icon>
+          Close
+        </el-button>
+      </div>
+    </template>
+    This is dialog content.
+  </el-dialog>
 </div>
 </template>
 
 <script>
 import profile from '../assets/profile.jpg'
-
+import { ElButton, ElDialog } from 'element-plus'
+import { CircleCloseFilled } from '@element-plus/icons-vue'
 export default {
     data(){
         return{
-            profile:profile
+            profile:profile,
+            visible:false, 
+            visible1:false
         }
     },
     methods:{
@@ -42,10 +70,10 @@ export default {
           alert('Stuff have been clicked')
         }
         else if(v.includes('patreon')){
-          alert('Patreon has been clicked')
+          this.visible= true;
         }
         else if(v.includes('donations')){
-          alert('Donations have been clicked')
+          this.visible1= true
         }
         else if(v.includes('courses')){
           alert('Courses have been cliced')
@@ -58,6 +86,11 @@ export default {
 </script>
 
 <style >
+.my-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .container{
     background-color: #001a1f;
     height:500px;

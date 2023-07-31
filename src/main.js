@@ -8,5 +8,5 @@ const app=createApp(App)
 app.use(router)
 app.use(ElementPlus)
 app.use(store)
-
+ 
 app.mount('#app')

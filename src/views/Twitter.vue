@@ -36,12 +36,15 @@ export default {
         }
     }, 
     mounted(){
-       const recaptchaScript = document.createElement("script");
+      
+          const recaptchaScript = document.createElement("script");
     recaptchaScript.setAttribute(
       "src",
       "https://platform.twitter.com/widgets.js"
     );
     document.head.appendChild(recaptchaScript);
+      
+      
     }
 
 }

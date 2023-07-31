@@ -14,9 +14,7 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
-        Home
-      </a>
+  
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           Front End
@@ -63,7 +61,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a @click="twitterClicked" target="_blank" class="button" style="background-color: #001a1f; color:white">
+          <a  @click="twitterClicked" target="_blank" class="button" style="background-color: #001a1f; color:white">
             <strong>Twitter</strong>
           </a>
           <router-link target="_blank" to="/" class="button is-light">
@@ -129,6 +127,15 @@ export default {
     },
     twitterClicked(){
       this.$router.push({path:'/twitter'})
+      window.open(routeData.href, '_blank');
+
+          const recaptchaScript = document.createElement("script");
+    recaptchaScript.setAttribute(
+      "src",
+      "https://platform.twitter.com/widgets.js"
+    );
+  document.head.appendChild(recaptchaScript);
+      
     }
 
 
