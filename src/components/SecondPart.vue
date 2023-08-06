@@ -1,6 +1,5 @@
 <template>
       <div class="cardtogether">
-    
     <div class="card" v-for="v in videos" :key='v.id' >
   <div class="card-content">
     <p class="title">
@@ -25,7 +24,7 @@
 </div>
 
  
-
+  
       </div>    
    
    
@@ -46,33 +45,40 @@ export default {
               },
               {
                 id:2,
-                title:'Create a racist AI',
-                vid:'https://www.youtube.com/embed/-IWgNtfqdAU'
+                title:'Keep-alive in Vue JS',
+                vid:"https://www.youtube.com/embed/wQvYLQwf5vU"
               },
               {
                 id:3,
-                title:'Create a racist AI',
-                vid:'https://www.youtube.com/embed/-IWgNtfqdAU'
+                title:'State management with VUEX',
+                vid:"https://www.youtube.com/embed/yyvooABwncI" 
               },
               {
                 id:4,
-                title:'Create a racist AI',
-                vid:'https://www.youtube.com/embed/-IWgNtfqdAU'
+                title:'Create a thumbnail for a website',
+                vid:'https://www.youtube.com/embed/TuPHfa-x1jo'
               },
                {
                 id:5,
-                title:'Create a racist AI',
-                vid:'https://www.youtube.com/embed/-IWgNtfqdAU'
+                title:'Fix routing issues for Netlify deployment',
+                vid:'https://www.youtube.com/embed/zrTIiNI8mGo'
               },
                {
                 id:6,
-                title:'Create a racist AI',
-                vid:'https://www.youtube.com/embed/-IWgNtfqdAU'
+                title:'Make a simple counter with Vue Js and Vuex',
+                vid:'https://www.youtube.com/embed/W1gcmEaRSJI'
               },
+
                {
                 id:7,
-                title:'Create a racist AI',
-                vid:'https://www.youtube.com/embed/-IWgNtfqdAU'
+                title:'Build an image slider from scratch using React JS and react hooks',
+                vid:'https://www.youtube.com/embed/K0k0zy4bAkoU'
+              },
+
+                 {
+                id:8,
+                title:'Recursion in JAVA',
+                vid:'https://www.youtube.com/embed/JFvUWv7C5o8'
               }
             ]
             
@@ -96,13 +102,16 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+  }
 .title{
   height:300px;
+ 
 }
+
 .card{
     width: 24%;
     margin:5px;
+    text-align: center;
 }
 .text {
   font-size: 14px;
@@ -150,6 +159,7 @@ export default {
 .cardtogether{
   display:flex;
     flex-wrap: wrap;
+   
 
   
 }
@@ -167,7 +177,7 @@ export default {
   }
  
 }
-@media only screen and (max-width:770px){
+@media only screen and (max-width:820px){
   .colstyler{
     margin:5px;
   }

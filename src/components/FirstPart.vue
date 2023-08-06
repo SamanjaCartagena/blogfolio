@@ -76,7 +76,7 @@ export default {
           this.visible1= true
         }
         else if(v.includes('courses')){
-          alert('Courses have been cliced')
+          alert('Courses have been clicked')
         }
 
 }

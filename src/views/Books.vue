@@ -3,9 +3,10 @@
  <div class="columns">
   <div class="column">
     <img :src='this.book1' style="height:500px;width:50%;"/>
+    <button type="submit" @submit="buybook" value='book1'>Get book</button>
   </div>
   <div class="column">
-    Second column
+    
   </div>
  
  
@@ -22,6 +23,11 @@ export default {
       book1:book1,
       colors:['red','blue','yellow','green']
     }
+  },
+  methods:{
+    buybook(){
+      
+    }
   }
 }
 </script>
@@ -29,7 +35,6 @@ export default {
 <style scoped>
 .column{
     height:300px;
-   background-color:red;
     margin:10px;
 }
 

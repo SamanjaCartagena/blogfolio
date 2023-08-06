@@ -61,18 +61,16 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a  @click="twitterClicked" target="_blank" class="button" style="background-color: #001a1f; color:white">
+          <router-link to='/twitter' target="_blank" class="button" style="background-color: #001a1f; color:white">
             <strong>Twitter</strong>
-          </a>
+          </router-link>
           <router-link target="_blank" to="/" class="button is-light">
            <strong>LinkTree</strong>
 
           </router-link>
 
-          <router-link target="_blank" to="/meta" class="button"  style="background-color: #001a1f; color:white">
-           <strong> Meta </strong>
-          </router-link>
-           <a target="_blank"  @click="dialogVisible = true" class="button is-light">
+        
+           <a target="_blank"  @click="dialogVisible = true" class="button" style="background-color: #001a1f; color:white">
            <strong>Newsletter</strong>
           </a>
         </div>
