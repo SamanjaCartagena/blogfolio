@@ -13,7 +13,10 @@
   </div>
    
   <center><p class="heading">Welcome to My<br/> BlogFolio</p></center>
-  <center><input type="search" class="search" placeholder="Search for tutorials,courses and materials"/></center>
+  <center><input type="search" class="search" v-model="searchVids"  placeholder="Search for tutorials,courses and materials"/>
+   <button class="btnsub" @click="$emit('passsearch',searchVids);submitted()" value="donations">Submit</button>
+
+  </center>
  <center><button class="patreons" @click="btnclicked($event.target.value)" value="patreon">Patreon</button>
  <button class="patreons" @click="btnclicked($event.target.value)" value="donations">Donate</button>
  <button class="patreons" @click="btnclicked($event.target.value)" value="courses">Courses</button>
@@ -54,11 +57,14 @@ import profile from '../assets/profile.jpg'
 import { ElButton, ElDialog } from 'element-plus'
 import { CircleCloseFilled } from '@element-plus/icons-vue'
 export default {
+  props:['search'],
     data(){
         return{
+           
             profile:profile,
             visible:false, 
-            visible1:false
+            visible1:false,
+            searchVids:''
         }
     },
     methods:{
@@ -79,7 +85,15 @@ export default {
           alert('Courses have been clicked')
         }
 
+},
+submitted(){
+
+  this.searchVids=''
 }
+    },
+    computed:{
+     
+
     }
 
 }
@@ -113,6 +127,25 @@ export default {
   color:#001a1f;
   border-color:1px solid #001a1f;
   cursor:pointer;
+}
+.btnsub{
+     position: relative;
+    top:50px;
+    background-color:white ;
+    color:#001a1f;
+    padding:7px;
+  
+    border:.2px solid white;
+    margin:5px;
+}
+.btnsub:hover{
+    
+    background-color:#001a1f ;
+    color:white;
+    padding:7px;
+     cursor:pointer;
+    border:.2px solid white;
+    
 }
 .heading{
     font-size: 50px;
