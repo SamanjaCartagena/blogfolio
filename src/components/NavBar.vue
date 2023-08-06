@@ -45,14 +45,13 @@
             Java
           </a>
           <a class="navbar-item">
-            Jobs
+            Python
           </a>
           <a class="navbar-item">
-            Contact
+            Ruby on Rails
           </a>
-          <hr class="navbar-divider">
           <a class="navbar-item">
-            Report an issue
+            PHP
           </a>
         </div>
       </div>
@@ -68,11 +67,15 @@
            <strong>LinkTree</strong>
 
           </router-link>
+ <router-link target="_blank" to="/" class="button " style="background-color: #001a1f; color:white">
+           <strong>Github</strong>
 
+          </router-link>
         
-           <a target="_blank"  @click="dialogVisible = true" class="button" style="background-color: #001a1f; color:white">
+           <a target="_blank"  @click="dialogVisible = true" class="button is-light" >
            <strong>Newsletter</strong>
           </a>
+        
         </div>
       </div>
     </div>

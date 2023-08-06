@@ -6,7 +6,8 @@
       Powered by  
      
     </p>
-    <p><strong><a href="https://jgthms.com">Infinitudex</a></strong>.</p>
+    <p><strong><a href="https://jgthms.com">Infinitudex</a></strong></p>
+    <p>Copyrights &copy 2023 Infinitudex</p>
   </div>
 </footer>
   </div>
