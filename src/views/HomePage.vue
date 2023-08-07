@@ -1,7 +1,7 @@
 <template>
   <div>
     <first-part :search='search' @passsearch="getData($event)"></first-part>
-    <second-part></second-part>
+    <second-part :results='results'></second-part>
     <footer-page></footer-page>
   </div>
 </template>
@@ -16,13 +16,14 @@ export default {
     },
     data(){
       return{
-        search:''
+        results:''
        
       }
     },
     methods:{
       getData(data){
         console.log('data is '+data)
+        this.results=data;
       }
     }
 

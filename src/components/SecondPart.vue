@@ -1,6 +1,6 @@
 <template>
       <div class="cardtogether">
-    <div class="card" v-for="v in videos" :key='v.id' >
+    <div class="card" v-for="v in filteredSearches" :key='v.id' >
   <div class="card-content">
     <p class="title">
       <iframe width="100%" height="100%" :src="v.vid" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -34,6 +34,7 @@
 <script>
 import ml from '../assets/ml.jpg'
 export default {
+  props:['results'],
     data(){
         return{
             ml:ml,
@@ -91,6 +92,11 @@ export default {
       },
       secondclicked(){
         console.log('Second clicked')
+      }
+    },
+    computed:{
+      filteredSearches(){
+        return this.videos.filter(videos=>videos.title.toLowerCase().includes(this.results.toLowerCase()))
       }
     }
 

@@ -13,7 +13,7 @@
   </div>
    
   <center><p class="heading">Welcome to My<br/> BlogFolio</p></center>
-  <center><input type="search" class="search" v-model="searchVids"  placeholder="Search for tutorials,courses and materials"/>
+  <center><input type="search" class="search" v-model="searchVids" @input="$emit('passsearch',searchVids)"  placeholder="Search for tutorials,courses and materials"/>
    <button class="btnsub" @click="$emit('passsearch',searchVids);submitted()" value="donations">Submit</button>
 
   </center>
