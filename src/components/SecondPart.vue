@@ -72,7 +72,7 @@ export default {
 
                {
                 id:7,
-                title:'Build an image slider from scratch using React JS and react hooks',
+                title:'Build an image slider using React and react hooks',
                 vid:'https://www.youtube.com/embed/K0k0zy4bAkoU'
               },
 
