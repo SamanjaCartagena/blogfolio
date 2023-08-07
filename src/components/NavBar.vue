@@ -63,10 +63,10 @@
           <router-link to='/twitter' target="_blank" class="button" style="background-color: #001a1f; color:white">
             <strong>Twitter</strong>
           </router-link>
-          <router-link target="_blank" to="/" class="button is-light">
+          <a target="_blank" href='https://linktr.ee/samanja' class="button is-light">
            <strong>LinkTree</strong>
 
-          </router-link>
+          </a>
  <router-link target="_blank" to="/" class="button " style="background-color: #001a1f; color:white">
            <strong>Github</strong>
 
