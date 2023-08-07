@@ -24,9 +24,9 @@
           <a class="navbar-item">
             JavaScript
           </a>
-          <a class="navbar-item">
+          <router-link to='/' class="navbar-item">
             React JS
-          </a>
+          </router-link>
           <a class="navbar-item">
             Brain JS
           </a>
@@ -72,7 +72,7 @@
 
           </router-link>
         
-           <a target="_blank"  @click="dialogVisible = true" class="button is-light" >
+           <a target="_blank"  @click="dialogVisible = true; addemail()" class="button is-light" >
            <strong>Newsletter</strong>
           </a>
         
@@ -111,6 +111,17 @@
 
 <script>
 import { ElMessageBox } from 'element-plus'
+import { onAuthStateChanged } from 'firebase/auth';
+import {auth, email,usersCollectionRef} from '../firebase/index'
+import {
+  doc,collection,
+  query,orderBy, 
+  limit, getDocs, 
+  onSnapshot, QuerySnapshot, 
+  updateDoc, addDoc, 
+  deleteDoc
+   }
+   from 'firebase/firestore'
 
 export default {
   data(){
@@ -120,6 +131,15 @@ export default {
     }
   },
   methods:{
+         addemail(){
+   addDoc(usersCollectionRef,{
+   email:this.mail,
+
+
+    })
+
+         },
+
     submission(){
       this.dialogVisible=false;
       this.$store.state.email=this.mail;
