@@ -72,7 +72,7 @@
 
           </router-link>
         
-           <a target="_blank"  @click="dialogVisible = true; addemail()" class="button is-light" >
+           <a target="_blank"  @click="dialogVisible = true; " class="button is-light" >
            <strong>Newsletter</strong>
           </a>
         
@@ -131,18 +131,14 @@ export default {
     }
   },
   methods:{
-         addemail(){
-   addDoc(usersCollectionRef,{
-   email:this.mail,
-
-
-    })
-
-         },
 
     submission(){
       this.dialogVisible=false;
-      this.$store.state.email=this.mail;
+    addDoc(usersCollectionRef,{
+     email:this.mail,
+
+
+    })
       console.log(this.$store.state.email)
       this.mail=''
     },
