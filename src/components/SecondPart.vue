@@ -12,7 +12,7 @@
   <footer class="card-footer">
     <p class="card-footer-item">
       <span>
-        View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+        View on <a href="https://hackernoon.com/creating-a-racist-ai-for-my-browser-with-javascript-and-brain-js" target='_blank'>Hackernoon</a>
       </span>
     </p>
     <p class="card-footer-item">

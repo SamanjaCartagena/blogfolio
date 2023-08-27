@@ -18,7 +18,7 @@
 
   </center>
  <center><!--<a class="patreons" href='https://buy.stripe.com/9AQ4j4ceX0UoeDm9AB' target='_blank' style='font-size:13px;' value="patreon">Coffee</a>!-->
- <a class="patreons" target='_blank' style='font-size:13px;' value="patreon">Hire Me</a>
+ <a class="patreons" href='https://buy.stripe.com/aEU2aW1AjdHaeDm6oq' target='_blank' style='font-size:13px;' value="patreon">Hire Me</a>
  <button class="patreons" @click="btnclicked($event.target.value)" value="courses">Courses</button>
  <button class="patreons" @click="btnclicked($event.target.value)" value="books">Books</button>
   <button class="patreons" @click="btnclicked($event.target.value)" value="stuff">Stuff</button>
