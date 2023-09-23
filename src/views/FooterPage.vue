@@ -6,7 +6,7 @@
       Powered by  
      
     </p>
-    <p><strong><a href="https://jgthms.com">Infinitudex</a></strong></p>
+    <p><strong><a href="">Infinitudex</a></strong></p>
     <p>Copyrights &copy; 2023 Infinitudex</p>
   </div>
 </footer>
@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .footer{
-  background-color:#001a1f ;
+  background-color:black ;
   color:white;
 }
 a{

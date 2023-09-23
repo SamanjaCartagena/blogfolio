@@ -106,7 +106,7 @@ submitted(){
   justify-content: space-between;
 }
 .container{
-    background-color: #001a1f;
+    background-color: black;
     height:500px;
     color:white;
 }

@@ -60,18 +60,23 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <router-link to='/twitter' target="_blank" class="button" style="background-color: #001a1f; color:white">
-            <strong>Twitter</strong>
-          </router-link>
-          <a target="_blank" href='https://linktr.ee/samanja' class="button is-light">
-           <strong>LinkTree</strong>
+          
+ <a target="_blank" to="/" class="button " @click="drawer = true" style="background-color: black; color:white">
+           <strong>Follow</strong>
 
           </a>
- <router-link target="_blank" to="/" class="button " style="background-color: #001a1f; color:white">
-           <strong>Github</strong>
+        <el-drawer  v-model="drawer" title="I am the title" :with-header="false">
+         <p style='padding-top:80px; padding-left:40px; font-size:25px; font-family:Times New Roman'><strong>Follow me on</strong></p>
+        <button class='iconbtn' value='facebook' @click='iconclicked($event.target.value)'><img :src="this.facebook" class='iconimage' @click='iconclicked'/>Facebook</button><br/>
+        <button class='iconbtn' value='linkedin' @click='iconclicked($event.target.value)'><img :src="this.linkedin" class='iconimage' @click='iconclicked'/>Instagram</button><br/>
+        <button class='iconbtn'  @click='iconclicked($event.target.value)' value='tiktok'><img :src="this.tiktok" class='iconimage'/>Tiktok</button><br/>
+                <button class='iconbtn' @click='iconclicked($event.target.value)' value='pinterest'><img :src="this.pinterest" class='iconimage' @click='iconclicked' />Pinterest</button><br/>
+                                <button class='iconbtn' @click='iconclicked($event.target.value)' value='youtube'><img :src="this.youtube" class='iconimage' @click='iconclicked'/>Youtube</button><br/>
+        <p style='padding-top:80px; padding-left:40px; font-size:25px; font-family:Times New Roman'><strong>Sign up for my monthly Newsletter</strong></p>
+        <input type='email' placeholder='Email' class='emailsignup'/>
+         <img :src="this.arrow" style='width:40px;height:40px; position:relative; left:50px;; top:50px;border:1px solid #d5a341'/>
 
-          </router-link>
-        
+  </el-drawer>
            <a target="_blank"  @click="dialogVisible = true; " class="button is-light" >
            <strong>Newsletter</strong>
           </a>
@@ -122,12 +127,22 @@ import {
   deleteDoc
    }
    from 'firebase/firestore'
-
+import facebook from '../assets/facebook.png';
+import linkedin from '../assets/linkedin.png';
+import tiktok from '../assets/tiktok.png';
+import twitter from '../assets/twitter.png';
 export default {
   data(){
     return{
       dialogVisible:false,
-      mail:''
+      mail:'',
+      drawer:false,
+      facebook:facebook,
+      linkedin:linkedin,
+      tiktok:tiktok,
+      twitter:twitter
+
+
     }
   },
   methods:{
