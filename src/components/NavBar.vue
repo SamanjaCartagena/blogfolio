@@ -2,10 +2,10 @@
   <div>
     <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <router-link class="navbar-item" to="/">
+    <router-link class='logo'  to="/">
      <p style="font-size:30px;"><strong>Coding with Samanja</strong></p>
     </router-link>
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger" @click='burgermenu' aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -70,7 +70,8 @@
         <button class='iconbtn' value='facebook' @click='iconclicked($event.target.value)'><img :src="this.facebook" class='iconimage' @click='iconclicked'/>Facebook</button><br/>
         <button class='iconbtn' value='linkedin' @click='iconclicked($event.target.value)'><img :src="this.linkedin" class='iconimage' @click='iconclicked'/>Instagram</button><br/>
         <button class='iconbtn'  @click='iconclicked($event.target.value)' value='tiktok'><img :src="this.tiktok" class='iconimage'/>Tiktok</button><br/>
-                <button class='iconbtn' @click='iconclicked($event.target.value)' value='pinterest'><img :src="this.pinterest" class='iconimage' @click='iconclicked' />Pinterest</button><br/>
+                <button class='iconbtn'  @click='twitterClicked' value='tiktok'><img :src="this.twitter" class='iconimage'/>Twitter</button><br/>
+
                                 <button class='iconbtn' @click='iconclicked($event.target.value)' value='youtube'><img :src="this.youtube" class='iconimage' @click='iconclicked'/>Youtube</button><br/>
         <p style='padding-top:80px; padding-left:40px; font-size:25px; font-family:Times New Roman'><strong>Sign up for my monthly Newsletter</strong></p>
         <input type='email' placeholder='Email' class='emailsignup'/>
@@ -131,6 +132,7 @@ import facebook from '../assets/facebook.png';
 import linkedin from '../assets/linkedin.png';
 import tiktok from '../assets/tiktok.png';
 import twitter from '../assets/twitter.png';
+import youtube from '../assets/youtube1.png';
 export default {
   data(){
     return{
@@ -140,7 +142,8 @@ export default {
       facebook:facebook,
       linkedin:linkedin,
       tiktok:tiktok,
-      twitter:twitter
+      twitter:twitter,
+      youtube:youtube
 
 
     }
@@ -157,7 +160,11 @@ export default {
       console.log(this.$store.state.email)
       this.mail=''
     },
+    burgermenu(){
+        this.$store.state.hamburgeron=true;
+    },
     twitterClicked(){
+      this.drawer=false;
       this.$router.push({path:'/twitter'})
       window.open(routeData.href, '_blank');
 
@@ -177,6 +184,37 @@ export default {
 </script>
 
 <style>
+.iconbtn{
+  background-color: black;
+  color:white;
+  font-size: 20px;
+  border-radius:3px;
+  border:1px solid black;
+  margin:10px;
+  width:200px;
+ 
+}
+.logo{
+  position:relative;
+  top:15px;
+   margin:10px;
+    color:black;
+
+}
+.iconbtn:hover{
+  background-color: white;
+  color:black;
+  cursor:pointer;
+}
+.iconimage{
+  font-size: 20px;
+  height:20px;
+  width:20px;
+  margin:5px;
+  position: relative;
+  
+  float:left;
+}
 .navbar{
     height:100px;
     font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
