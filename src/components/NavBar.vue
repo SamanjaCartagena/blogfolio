@@ -2,8 +2,8 @@
   <div>
     <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <router-link class='logo'  to="/">
-     <p style="font-size:30px;"><strong>Coding with Samanja</strong></p>
+    <router-link   to="/">
+     <p class='logo' ><strong>Coding with Samanja</strong></p>
     </router-link>
     <a role="button" class="navbar-burger" @click='burgermenu' aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
@@ -199,6 +199,7 @@ export default {
   top:15px;
    margin:10px;
     color:black;
+    font-size: 30px;
 
 }
 .iconbtn:hover{
@@ -225,6 +226,13 @@ export default {
   padding:5px;
   position:relative;
   top:10px;
+}
+.logo{
+  font-size: 25px;
+  position: absolute;
+  margin:0px;
+  left:10px;
+  top:15px;
 }
 }
 </style>
