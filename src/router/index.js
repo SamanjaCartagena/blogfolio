@@ -3,6 +3,7 @@ import HomePage from '../views/HomePage.vue';
 import Twitter from '../views/Twitter.vue';
 import Meta from '../views/Meta.vue';
 import Books from '../views/Books.vue';
+import Products from '../views/Products.vue';
 const router=createRouter({
     history: createWebHistory(),
     routes:[{
@@ -22,7 +23,10 @@ const router=createRouter({
         path:'/books',
         component:Books
     },
-   
+     {
+        path:'/products',
+        component:Products
+     }
   
   
 ]

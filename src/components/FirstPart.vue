@@ -1,5 +1,5 @@
 <template>
-  <div class="container is-fluid">
+  <div class="container is-fluid" @click='burgeroff'>
 <div class="demo-type">
  
    <center>
@@ -21,7 +21,7 @@
  <a class="patreons" href='https://buy.stripe.com/aEU2aW1AjdHaeDm6oq' target='_blank' style='font-size:13px;' value="patreon">Hire Me</a>
  <button class="patreons" @click="btnclicked($event.target.value)" value="courses">Courses</button>
  <button class="patreons" @click="btnclicked($event.target.value)" value="books">Books</button>
-  <button class="patreons" @click="btnclicked($event.target.value)" value="stuff">Stuff</button>
+  <button class="patreons" @click="btnclicked($event.target.value)" value="products">Products</button>
 
  </center>
 
@@ -68,11 +68,14 @@ export default {
         }
     },
     methods:{
+      burgeroff(){
+       this.$store.state.hamburgeron=false;
+      },
       btnclicked(v){
         if(v.includes('books')){
            this.$router.push({path:'/books'})
         }
-        else if(v.includes('stuff')){
+        else if(v.includes('products')){
           alert('Stuff have been clicked')
         }
         else if(v.includes('patreon')){

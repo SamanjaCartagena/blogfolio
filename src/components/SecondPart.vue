@@ -1,5 +1,5 @@
 <template>
-      <div class="cardtogether">
+      <div class="cardtogether" @click='burgeroff'>
     <div class="card" v-for="v in filteredSearches" :key='v.id' >
   <div class="card-content">
     <p class="title">
@@ -87,6 +87,9 @@ export default {
         }
     },
     methods:{
+      burgeroff(){
+       this.$store.state.hamburgeron=false;
+      },
       brainclicked(){
         console.log("Machine clicked")
       },
