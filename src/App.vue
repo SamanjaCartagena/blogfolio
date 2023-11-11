@@ -22,8 +22,6 @@ body {
     margin: 0; 
     height: 100vh;
 }
-  footer-page{
-    z-index: 1000;
-  }
+
 
 </style>

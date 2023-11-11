@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bookcontainer">
  <div class="columns">
   
   <div class="column">
@@ -85,12 +85,18 @@ readless(){
 document.getElementById("readbtn").style.display="block"
 
 }
+  },
+  mounted:{
+    
   }
  
 }
 </script>
 
 <style scoped>
+.bookcontainer{
+  z-index: 1000;
+}
 .column{
     height:300px;
     margin:10px;

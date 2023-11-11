@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="twitterPageContainer">
     <center>
 
     <p style="font-size:30px; background-color:#001a1f; color:white;position:relative; bottom:10px; ">Find me on Twitter 
@@ -53,5 +53,11 @@ export default {
 </script>
 
 <style>
-
+.twitterPageContainer{
+  z-index: 1000;
+  background-color: black;
+}
+.twitter-tweet{
+  z-index: 1000;
+}
 </style>

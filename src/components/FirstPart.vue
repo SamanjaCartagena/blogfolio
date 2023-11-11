@@ -3,14 +3,14 @@
   <div class="container is-fluid" @click='burgeroff' >
   <div class='social'>
     <ul>
-      <li>
+      <li  @click='facebooking'>
     <img :src='this.facebook' style='width:30px;height:30px;border-radius:5px;'/>
       </li>
-      <li>
+      <li @click='tiktoking'>
             <img :src='this.tiktok' style='width:32px;height:32px;border-radius:5px;'/>
 
       </li>
-        <li>
+        <li @click='twitterClicked'>
             <img :src='this.twitter' style='width:30px;height:30px;border-radius:5px;'/>
 
       </li>
@@ -31,12 +31,11 @@
   </center>
    </div>
  <center><!--<a class="patreons" href='https://buy.stripe.com/9AQ4j4ceX0UoeDm9AB' target='_blank' style='font-size:13px;' value="patreon">Coffee</a>!-->
- <a class="patreons" href='https://buy.stripe.com/aEU2aW1AjdHaeDm6oq' target='_blank' style='font-size:13px;' value="patreon">Hire Me</a>
+ <a class="patreons" href='https://buy.stripe.com/aEU2aW1AjdHaeDm6oq' target='_blank' style='font-size:15px;' value="patreon">Hire Me</a>
  <button class="patreons" @click="btnclicked($event.target.value)" value="courses">Courses</button>
  <button class="patreons" @click="btnclicked($event.target.value)" value="books">Books</button>
-  <button class="patreons" @click="btnclicked($event.target.value)" value="products">Products</button>
+  <button class="patreons" @click="btnclicked($event.target.value)" value="products">Projects</button>
   <button class="patreons" @click="btnclicked($event.target.value)" value="products">Newsletter</button>
-  <button class="patreons" @click="btnclicked($event.target.value)" value="products">Interview Prep</button>
 
  </center>
 
@@ -115,6 +114,42 @@ export default {
         }
 
 },
+facebooking(){
+          window.open('https://www.facebook.com/profile.php?id=100078037805507','_blank')
+
+},
+tiktoking(){
+        window.open('https://www.tiktok.com/@codingwithsamanja','_blank')
+
+},
+ twitterClicked(){
+      this.drawer=false;
+     // this.$router.push({path:'/twitter'})
+        window.location.href('/twitter');
+
+          const recaptchaScript = document.createElement("script");
+    recaptchaScript.setAttribute(
+      "src",
+      "https://platform.twitter.com/widgets.js"
+    );
+  document.head.appendChild(recaptchaScript);
+      
+    },
+iconclicked(v){
+      console.log("This particular icon "+v+" has been clicked")
+      if(v.includes('facebook')){
+        window.open('https://www.facebook.com/profile.php?id=100078037805507','_blank')
+      }
+      else if(v.includes('tiktok')){
+        window.open('https://www.tiktok.com/@codingwithsamanja','_blank')
+      }
+      else if(v.includes('linkedin')){
+        window.open('https://www.linkedin.com/in/samanja-cartagena-80aa8920a/','_blank')
+      }
+      else if(v.includes('youtube')){
+        window.open('https://www.youtube.com/channel/UCUe9B_qnHgGzWUTSrE_7AtQ','_blank')
+      }
+     },
 submitted(){
 
   this.searchVids=''
@@ -165,6 +200,7 @@ li:hover{
     background-color: transparent;
     color:black;
     font-weight: bold;
+    font-size: 15px;
     padding:10px;
     border-left:0px;
     border-top:0px;
@@ -174,21 +210,20 @@ li:hover{
 }
 .patreons:hover{
   background-color: white;
-  color:#001a1f;
-  border-color:1px solid #001a1f;
+  color:black;
+  border-color:1px solid black;
   cursor:pointer;
 }
 .btnsub{
      position: relative;
     top:50px;
-    background-color:transparent ;
-    color:#001a1f;
-    padding:7px;
+    background-color:white;
+    color:black;
     font-weight: bold;
-   border-top:0px;
-    border-bottom:0px;
-    border-left:0px;
-    border-right:.2px solid white;
+    font-size: 15px;
+    padding:7px;
+     border:0px;
+  
     margin:5px;
 }
 .btnsub:hover{
@@ -232,6 +267,14 @@ li:hover{
 
 
 @media only screen and (max-width:700px){
+  .container{
+    position: relative;
+    top:20px;
+  }
+  li{
+    height:30px;
+    width:30px;
+  }
   .heading {
      font-size: 30px;
   }
