@@ -13,12 +13,14 @@
   </div>
   <div class='burgermenuitems' v-if='this.$store.state.hamburgeron'>
     <ul >
-     <li class='burgerbox'>
+     <li class='burgerbox' @click='openfollows'>
        Follow <p class='plus'>+</p>
      </li>
-     <div class='follows' >
-
-     </div>
+     <li class='burgerbox' v-if='this.$store.state.follows' style='z-index:5500'>
+        
+             Facebook
+          
+     </li>
      <li class='burgerbox'>
        Newsletter <p class='plus'>+</p>
      </li>
@@ -112,11 +114,11 @@
       <div class="navbar-item">
         <div class="buttons">
           
- <a target="_blank" to="/" class="button " @click="drawer = true" style="background-color: black; color:white">
+ <a target="_blank" to="/" class="button " @click="drawer = true" style="background-color: black; color:white;">
            <strong>Follow</strong>
 
           </a>
-        <el-drawer  v-model="drawer" title="I am the title" :with-header="false">
+        <el-drawer  v-model="drawer" title="I am the title" :with-header="false" style="zIndex:3000">
          <p style='padding-top:80px; padding-left:40px; font-size:25px; font-family:Times New Roman'><strong>Follow me on</strong></p>
         <button class='iconbtn' value='facebook' @click='iconclicked($event.target.value)'><img :src="this.facebook" class='iconimage' @click='iconclicked'/>Facebook</button><br/>
         <button class='iconbtn' value='linkedin' @click='iconclicked($event.target.value)'><img :src="this.linkedin" class='iconimage' @click='iconclicked'/>Linkedin</button><br/>
@@ -202,7 +204,9 @@ export default {
     }
   },
   methods:{
-    
+     openfollows(){
+       console.log('Hey')
+     },
      iconclicked(v){
       console.log("This particular icon "+v+" has been clicked")
       if(v.includes('facebook')){
@@ -328,9 +332,16 @@ export default {
 }
 .navbar{
     height:100px;
+    background-color:transparent;
     font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
   'Microsoft YaHei', '微软雅黑', Arial, sans-serif;;
 }
+.follows{
+  width:100%;
+  height:50px;
+  border:1px solid #d5a341;
+}
+
 @media only screen and (max-width:700px){
 .navbar{
   padding:5px;

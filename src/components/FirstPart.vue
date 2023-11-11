@@ -1,27 +1,42 @@
 <template>
-  <div class="container is-fluid" @click='burgeroff'>
-<div class="demo-type">
- 
-   <center>
-    <el-avatar :size="100" src="https://empty" @error="errorHandler">
-      <img
-        :src="this.profile"
-        style="object-fit:cover"
-      />
-    </el-avatar>
-   </center>
+  
+  <div class="container is-fluid" @click='burgeroff' >
+  <div class='social'>
+    <ul>
+      <li>
+    <img :src='this.facebook' style='width:30px;height:30px;border-radius:5px;'/>
+      </li>
+      <li>
+            <img :src='this.tiktok' style='width:32px;height:32px;border-radius:5px;'/>
+
+      </li>
+        <li>
+            <img :src='this.twitter' style='width:30px;height:30px;border-radius:5px;'/>
+
+      </li>
+         <li style="background-color:transparent; border:0px;">
+            <img :src='this.youtube' style='width:30px;height:30px;border-radius:5px;'/>
+
+      </li>
+    </ul>
   </div>
+     
+      
+   <div >
    
-  <center><p class="heading">Welcome to My<br/> BlogFolio</p></center>
+  <center><p class="heading"><strong>Welcome to My</strong><br/> <strong>BlogFolio</strong></p></center>
   <center><input type="search" class="search" v-model="searchVids" @input="$emit('passsearch',searchVids)"  placeholder="Search for tutorials,courses and materials"/>
    <button class="btnsub" @click="$emit('passsearch',searchVids);submitted()" value="donations">Submit</button>
 
   </center>
+   </div>
  <center><!--<a class="patreons" href='https://buy.stripe.com/9AQ4j4ceX0UoeDm9AB' target='_blank' style='font-size:13px;' value="patreon">Coffee</a>!-->
  <a class="patreons" href='https://buy.stripe.com/aEU2aW1AjdHaeDm6oq' target='_blank' style='font-size:13px;' value="patreon">Hire Me</a>
  <button class="patreons" @click="btnclicked($event.target.value)" value="courses">Courses</button>
  <button class="patreons" @click="btnclicked($event.target.value)" value="books">Books</button>
   <button class="patreons" @click="btnclicked($event.target.value)" value="products">Products</button>
+  <button class="patreons" @click="btnclicked($event.target.value)" value="products">Newsletter</button>
+  <button class="patreons" @click="btnclicked($event.target.value)" value="products">Interview Prep</button>
 
  </center>
 
@@ -52,7 +67,13 @@
 </div>
 </template>
 
-<script>
+<script >
+import facebook from '../assets/facebook1.png';
+import linkedin from '../assets/linkedin.png';
+import tiktok from '../assets/tiktok1.png';
+import twitter from '../assets/twitter1.png';
+import youtube1 from '../assets/youtube.png';
+import arrow from '../assets/arrow.png';
 import profile from '../assets/profile.jpg'
 import { ElButton, ElDialog } from 'element-plus'
 import { CircleCloseFilled } from '@element-plus/icons-vue'
@@ -64,9 +85,14 @@ export default {
             profile:profile,
             visible:false, 
             visible1:false,
-            searchVids:''
+            searchVids:'',
+            facebook:facebook,
+            twitter:twitter,
+            youtube:youtube1,
+            tiktok:tiktok
         }
     },
+   
     methods:{
       burgeroff(){
        this.$store.state.hamburgeron=false;
@@ -94,30 +120,51 @@ submitted(){
   this.searchVids=''
 }
     },
-    computed:{
-     
-
-    }
 
 }
+
 </script>
 
-<style >
+<style scoped>
+li{
+  display: inline-block;
+  margin:5px;
+  opacity:.8;
+  height:50px;
+  width:80px;
+  background-color: transparent;
+  padding-top:8px;
+  
+}
+li:hover{
+ cursor: pointer;
+}
+.social{
+  text-align: center;
+ 
+}
+
 .my-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
+
+
 .container{
-    background-color: black;
+    position: relative;
+    top:100px;
     height:500px;
-    color:white;
+    color:black;
+    z-index: 1000;
 }
 .patreons{
     position: relative;
     top:55px;
     background-color: transparent;
-    color:white;
+    color:black;
+    font-weight: bold;
     padding:10px;
     border-left:0px;
     border-top:0px;
@@ -134,20 +181,26 @@ submitted(){
 .btnsub{
      position: relative;
     top:50px;
-    background-color:white ;
+    background-color:transparent ;
     color:#001a1f;
     padding:7px;
-  
-    border:.2px solid white;
+    font-weight: bold;
+   border-top:0px;
+    border-bottom:0px;
+    border-left:0px;
+    border-right:.2px solid white;
     margin:5px;
 }
 .btnsub:hover{
     
-    background-color:#001a1f ;
-    color:white;
+    background-color:white ;
+    color:black;
     padding:7px;
      cursor:pointer;
-    border:.2px solid white;
+     border-top:0px;
+    border-bottom:0px;
+    border-left:0px;
+ 
     
 }
 .heading{
@@ -174,6 +227,10 @@ submitted(){
 .demo-type > div:not(:last-child) {
   border-right: 1px solid var(--el-border-color);
 }
+
+
+
+
 @media only screen and (max-width:700px){
   .heading {
      font-size: 30px;

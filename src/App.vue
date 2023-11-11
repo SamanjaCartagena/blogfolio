@@ -1,18 +1,16 @@
 <template>
   <div>
-    <nav-bar></nav-bar>
     <router-view></router-view>
     <footer-page></footer-page>
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
 import FooterPage from './views/FooterPage.vue'
 
 export default {
-  components: { NavBar, FooterPage },
-  
+  components: {FooterPage },
+
 
 }
 </script>
@@ -20,8 +18,12 @@ export default {
 <style>
 @import 'bulma/css/bulma.min.css';
 
-body{
-  padding:0;
-  margin:0;
+body { 
+    margin: 0; 
+    height: 100vh;
 }
+  footer-page{
+    z-index: 1000;
+  }
+
 </style>

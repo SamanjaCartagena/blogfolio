@@ -5,7 +5,8 @@ import { createStore } from 'vuex'
 const store = createStore({
   state () {
     return {
-      hamburgeron:false
+      hamburgeron:false,
+      follows:false
     }
   },
   mutations: {

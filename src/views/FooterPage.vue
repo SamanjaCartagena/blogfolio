@@ -1,6 +1,6 @@
 <template>
-  <div>
-<footer class="footer">
+  <div style="zIndex:1000">
+<footer>
   <div class="content has-text-centered">
     <p>
       Powered by  
@@ -20,15 +20,26 @@ export default {
 </script>
 
 <style scoped>
-.footer{
+.footerPage{
   background-color:black ;
-  color:white;
+  color:black;
+  z-index:1000 ;
+
 }
 a{
-  color:white;
+  color:black;
   font-size: 25px;
+    z-index:2000 ;
+
 }
 .strongtext{
-  color:white;
+  color:black;
+}
+.content{
+  z-index: 1000;
+}
+p{
+  z-index: 1000;
+  color:black;
 }
 </style>

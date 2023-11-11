@@ -15,11 +15,7 @@
         View on <a href="https://hackernoon.com/creating-a-racist-ai-for-my-browser-with-javascript-and-brain-js" target='_blank'>Hackernoon</a>
       </span>
     </p>
-    <p class="card-footer-item">
-      <span>
-        Share on <a href="#">Facebook</a>
-      </span>
-    </p>
+   
   </footer>
 </div>
 
@@ -121,6 +117,10 @@ export default {
     width: 24%;
     margin:5px;
     text-align: center;
+    z-index: 1000;
+    background-color: transparent;
+  animation-name: spin;
+  animation-duration: 5000ms;
 }
 .text {
   font-size: 14px;
@@ -168,9 +168,18 @@ export default {
 .cardtogether{
   display:flex;
     flex-wrap: wrap;
+    z-index: 1000;
    
 
   
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
 @media only screen and (max-width:1100px){
    .card
